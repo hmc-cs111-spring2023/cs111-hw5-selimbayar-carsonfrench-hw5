@@ -1,3 +1,7 @@
 package dfa // leave this line in the file
 
-// TODO: replace this comment with your implementation
+case class State(label: String):
+    override def toString = label
+
+
+
