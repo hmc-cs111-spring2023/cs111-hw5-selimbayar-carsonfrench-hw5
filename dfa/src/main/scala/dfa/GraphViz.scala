@@ -20,9 +20,9 @@ def graphViz(dfa: DFA): String = {
       "digraph G {",
       "\tnode [shape=circle]",
       s"\t${quote("")} [shape=none]",
-      s"\t${quote("")}->${quote(dfa.start.label)}"
+      s"\t${quote("")}->${quote(dfa.startState.label)}"
     ) ++
-      dfa.accept.map(state => s"\t${stateToGV(state)} [shape=doublecircle]") ++
+      dfa.acceptingStates.map(state => s"\t${stateToGV(state)} [shape=doublecircle]") ++
       dfa.transitions.map(transitionToGV) ++
       List("}")
   ).mkString("\n")

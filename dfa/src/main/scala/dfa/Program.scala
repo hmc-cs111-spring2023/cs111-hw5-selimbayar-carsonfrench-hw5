@@ -12,8 +12,8 @@ val testDFA = {
   DFA(
     states = Set(s0, s1),
     transitions = Set(t11, t12, t01, t02),
-    start = s0,
-    accept = Set(s0)
+    startState = s0,
+    acceptingStates = Set(s0)
   )
 }
 
